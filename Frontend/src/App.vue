@@ -50,8 +50,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import type { Task } from '@/types/Task'
-import { getTasks, createTask, deleteTask, updateTask } from '@/api/tasks'
+import type { Task } from '../src/types/Task'
+import { getTasks, createTask, deleteTask, updateTask } from '../src/api/tasks'
 
 const tasks = ref<Task[]>([])
 const form = ref({ title: '', description: '' })

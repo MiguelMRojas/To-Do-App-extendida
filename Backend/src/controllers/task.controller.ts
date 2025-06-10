@@ -18,6 +18,7 @@ export const getTasks = async (req: Request, res: Response) => {
 
 export const createTask = async (req: Request, res: Response): Promise<void> => {
   try {
+    console.log('Datos recibidos:', req.body);
     const { title, description } = req.body;
 
     if (!title || !description) {
