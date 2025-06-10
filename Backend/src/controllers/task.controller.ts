@@ -1,9 +1,14 @@
 import { Request, Response } from 'express';
 import Task from '../models/task.model';
 
-export const getTasks = async (_req: Request, res: Response) => {
+export const getTasks = async (req: Request, res: Response) => {
   try {
-    const tasks = await Task.find();
+    const { completed } = req.query;
+    let filter = {};
+    if (completed === 'true') filter = { completed: true };
+    if (completed === 'false') filter = { completed: false };
+
+    const tasks = await Task.find(filter);
     res.json(tasks);
   } catch (error) {
     console.error('❌ Error al obtener tareas:', error);

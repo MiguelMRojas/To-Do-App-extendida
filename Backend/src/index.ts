@@ -8,7 +8,7 @@ const PORT = 3000;
 const MONGO_URI = 'mongodb://localhost:27017/todoapp';
 
 // Middlewares
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
 // Rutas
