@@ -1,5 +1,3 @@
-# To-Do-App-extendida
-
 # To-Do App Extendida (Fullstack)
 
 Este proyecto es una aplicación To-Do de pila completa desarrollada con **Node.js + Express + MongoDB** para el backend y **Vue 3 + TypeScript + TailwindCSS** para el frontend.
